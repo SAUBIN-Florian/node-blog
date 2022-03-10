@@ -1,0 +1,71 @@
+.write{
+  padding-top: 50px;
+}
+
+.write-img{
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 70vw;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.write-form{
+  position: relative;
+}
+
+.write-form-group{
+  display: flex;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.write-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid;
+  font-size: 20px;
+  color: rgb(167, 159, 159);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.write-icon:hover{
+  transform: scale(1.2);
+  color: teal;
+}
+
+.write-input{
+  font-size: 20px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+}
+
+.write-input:focus{
+  outline: none;
+}
+
+.write-text{
+  font-size: 20px;
+  height: 100vh;
+}
+
+.write-submit{
+  position: absolute;
+  top: 20px;
+  right: 150px;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}

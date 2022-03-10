@@ -1,0 +1,64 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.top-left, .top-right{
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-center{
+  flex: 6;
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-logo {
+  color: #444;
+}
+
+.topbar-list {
+  display: flex;
+}
+
+.list-item {
+  font-size: 18px;
+  padding: 0 12px;
+}
+
+.list-item a {
+  color: #444;
+}
+
+.logout-link{
+  color: #444;
+  cursor: pointer;
+}
+
+.top-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.img-search {
+  color: #444;
+  display: flex;
+  align-items: center;
+}
+
+.top-search {
+  cursor: pointer;
+  padding: 0 10px;
+}
