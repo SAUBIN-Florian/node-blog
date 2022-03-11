@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Context } from '../context/Context';
-import axios from 'axios';
+import { axiosInstance } from '../config';
 import "../styles/show.css";
 
 export default function ShowPost() {
@@ -19,7 +19,7 @@ export default function ShowPost() {
     try{
       //need to send a "data" object with the username for the axios DELETE method
       //or it's a 401 error "Unauthorized" !
-      await axios.delete("/posts/" + path, {data: {username: user.username}});
+      await axiosInstance.delete("/posts/" + path, {data: {username: user.username}});
       window.location.replace("/");
     }catch(err){}
   }
@@ -27,14 +27,14 @@ export default function ShowPost() {
   const handleUpdate = async () => {
     try{
       // no need the "data" object with the axios PUT method unlike DELETE...
-      await axios.put("/posts/" + path, {username: user.username, title, description});
+      await axiosInstance.put("/posts/" + path, {username: user.username, title, description});
       setUpdateMode(false)
     }catch(err){}
   }
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get("/posts/" + path);
+      const res = await axiosInstance.get("/posts/" + path);
       setPost(res.data.post);
       setTitle(res.data.post.title);
       setDescription(res.data.post.description);

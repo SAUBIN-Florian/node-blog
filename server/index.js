@@ -50,8 +50,13 @@ const categoryRoute = require("./routes/categories");
 app.use("/categories", categoryRoute);
 
 //Server
-const PORT = 5000;
 
-app.listen(PORT, () => {
+app.use(express.static(path.join(__dirname, "/client/build")));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+});
+
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is runnin' on PORT: ${PORT}`)
 })

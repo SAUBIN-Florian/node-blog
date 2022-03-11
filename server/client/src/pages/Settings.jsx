@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import Sidebar from '../components/Sidebar';
-import axios from "axios";
 import { Context } from '../context/Context';
+import { axiosInstance } from '../config';
 import "../styles/settings.css";
 
 export default function Settings() {
@@ -28,11 +28,11 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try{
-        await axios.post("/upload", data);
+        await axiosInstance.post("/upload", data);
       }catch(err){}
     }
     try{
-      await axios.put("/users/" + user._id, updatedUser);
+      await axiosInstance.put("/users/" + user._id, updatedUser);
       setSuccess(true);
     }catch(err){
     }
