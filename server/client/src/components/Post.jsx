@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "../styles/posts.css";
 
 export default function Post({post}) {
-  const PUBLIC_FOLDER = "http://localhost:5000/images/";
+  const PUBLIC_FOLDER = "https://blog-node-flo.herokuapp.com/images/";
 
   return (
     <div className="post">

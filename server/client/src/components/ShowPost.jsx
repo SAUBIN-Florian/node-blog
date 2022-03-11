@@ -13,7 +13,7 @@ export default function ShowPost() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
-  const PUBLIC_FOLDER = "http://localhost:5000/images/";
+  const PUBLIC_FOLDER = "https://blog-node-flo.herokuapp.com/images/";
 
   const handleDelete = async () => {
     try{

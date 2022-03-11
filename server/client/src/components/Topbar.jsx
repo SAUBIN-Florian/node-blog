@@ -6,7 +6,7 @@ import "../styles/topbar.css";
 export default function Topbar() {
   
   const {user, dispatch} = useContext(Context);
-  const PUBLIC_FOLDER = "http://localhost:5000/images/";
+  const PUBLIC_FOLDER = "https://blog-node-flo.herokuapp.com/images/";
 
   const handleLogout = () => {
     dispatch({type: "LOGOUT"})
